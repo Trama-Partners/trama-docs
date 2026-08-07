@@ -1,0 +1,10 @@
+{
+  "label": "Processos",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Processos",
+    "description": "Como o time da Trama Partners executa cada frente de trabalho — passo a passo, ferramentas usadas e critérios de decisão.",
+    "slug": "/processos"
+  }
+}

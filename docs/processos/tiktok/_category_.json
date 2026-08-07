@@ -1,0 +1,10 @@
+{
+  "label": "TikTok Shop",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "TikTok Shop",
+    "description": "Operação de lives, ferramentas de automação e comparativos de plataformas usadas nas contas de TikTok Shop.",
+    "slug": "/processos/tiktok"
+  }
+}

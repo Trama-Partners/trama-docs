@@ -1,0 +1,10 @@
+{
+  "label": "Consultoria",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Consultoria",
+    "description": "Metodologias de diagnóstico e otimização entregues aos clientes: SEO, análise de dados e growth.",
+    "slug": "/processos/consultoria"
+  }
+}
