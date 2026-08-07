@@ -1,0 +1,140 @@
+---
+sidebar_position: 1
+title: Live IA 24h automática
+description: Método completo para produzir e transmitir lives de TikTok Shop 100% geradas por inteligência artificial, rodando de forma automática 24 horas por dia
+---
+
+# Live com IA no TikTok Shop rodando 24h no automático
+
+## Resumo
+
+Método completo para produzir e transmitir lives de TikTok Shop 100% geradas por inteligência artificial, rodando de forma automática 24 horas por dia. O TikTok passou a detectar lives em loop e vídeos gravados repetidos (mudança descrita como "até o mês passado" em relação à gravação), o que inviabilizou a configuração automática nativa do Live Studio. O vídeo apresenta um fluxo alternativo: gerar imagem do produto no ChatGPT, animar no Flow (Google VO3 / Omni), gerar narração no ElevenLabs, e transmitir via TikTok Studio + OBS + VB Cable, controlado por uma extensão de navegador criada pelo autor (gerenciamento de live, rotação de vídeos/áudios e proteção contra violação).
+
+## Ferramentas
+
+- **Viral** — ferramenta de espionagem/mineração de produtos para TikTok Shop. Usada para encontrar produtos validados com precisão; é a fonte preferida do autor.
+- **shop.tiktok.com** — site oficial do TikTok Shop. Alternativa gratuita para verificar quais produtos estão vendendo bem. Não substitui a Viral.
+- **ChatGPT ("chat EPT" na transcrição)** — gera a imagem do produto a partir da foto do anúncio e gera os prompts em JSON para animação, além do roteiro de narração.
+- **Flow (Google)** — plataforma onde a imagem é animada em vídeo. Permite escolher o modelo de geração.
+- **Google VO3 / VO3 Quality / Omni (OmniFlash)** — modelos de geração de vídeo dentro do Flow. O autor prefere o Omni por qualidade e fluidez superiores ao VO3 Quality.
+- **ElevenLabs** — geração de narração por IA (texto para fala). Permite ajustar velocidade e estabilidade e escolher a voz.
+- **TikTok Studio (aplicativo desktop)** — software oficial de transmissão. Recebe a captura de janela e o áudio para colocar a live no ar.
+- **OBS** — usado no fluxo de áudio/vídeo junto com o VB Cable.
+- **VB Cable** — driver de áudio virtual que roteia o som dentro do computador; o áudio sai para a live sem ser reproduzido nas caixas de som.
+- **Extensão do autor (gerenciador de lives)** — extensão de navegador que controla rotação de vídeos, rotação de áudios, timer, moderação de comentários, fixação de produtos, logs e proteção contra violação. Link e cupom na descrição do vídeo. Nome não citado nesta transcrição.
+
+## Métodos e Estratégias
+
+- **Produto que se vende sozinho**: escolher itens baratos, de necessidade ampla e fáceis de reproduzir com IA (exemplo usado: kit de 7 toalhas por R$ 11,00). O produto barato dá tração à live.
+- **Formato POV sem pessoas**: gerar imagem/vídeo mostrando apenas mãos e o produto — nenhum avatar, nenhuma pessoa na cena. Evita o "vale da estranheza" de avatares e simplifica a geração.
+- **Múltiplos takes com ações diferentes**: pedir ao ChatGPT ao menos 3 prompts em JSON com ações distintas (pegar e esticar a toalha de cima, passar a mão nas toalhas, etc.) para gerar variedade visual.
+- **Múltiplas narrações**: gerar pelo menos 3 variações do roteiro e, no ElevenLabs, aproveitar as duas gerações que a ferramenta entrega por vez — resultando em várias faixas de áudio distintas.
+- **Rotação aleatória**: vídeos com transição (reverse) e áudios em ordem aleatória entre faixas, para que o TikTok não identifique repetição/loop.
+- **Áudio dos vídeos mutado**: os clipes gerados entram mutados; todo o som vem das faixas de narração.
+- **Proteção contra violação**: como o TikTok primeiro avisa e só depois bane, a extensão encerra a live imediatamente ao detectar um aviso. Recomendação do autor: sempre encerrar e reabrir a live em vez de continuar.
+- **Live multiproduto**: gerar mais vídeos no VO3/Omni durante a própria live e ir adicionando, trocando o produto fixado conforme o vídeo correspondente aparece.
+
+## Passo a Passo
+
+1. Escolher o produto na Viral ou em `shop.tiktok.com`, priorizando itens baratos e fáceis de recriar com IA.
+2. Copiar a imagem do produto do anúncio.
+3. Colar a imagem no ChatGPT e pedir a geração de uma nova imagem, especificando: cenário bem iluminado, formato POV, apenas mãos e produto, sem pessoas ou avatares, produto disposto do jeito que está (ex.: toalhas empilhadas) e espaço para trabalhar movimento das mãos.
+4. Copiar a imagem gerada e levá-la para a área de trabalho do Flow.
+5. Pedir ao ChatGPT prompts em JSON para animar a imagem — no mínimo 3 variações com ações diferentes.
+6. No Flow, colar cada prompt, selecionar o modelo (Omni), configurar 4 versões e proporção 9:16, e enviar.
+7. Em paralelo, pedir ao ChatGPT uma narração de mil caracteres no estilo de live: vendendo o produto, parabenizando compradores pelo nome, citando qualidades e aplicando escassez. Solicitar mais 2 versões do mesmo áudio.
+8. Acessar o ElevenLabs em modo texto-para-fala, escolher uma voz compatível com o perfil da conta (no exemplo, voz feminina "Jéssica").
+9. Testar apenas a primeira frase para calibrar tonalidade, velocidade e estabilidade antes de gerar tudo (no exemplo: velocidade 1.03, estabilidade 52%).
+10. Gerar cada versão da narração e baixar as duas variações que o ElevenLabs entrega por geração.
+11. Baixar todos os vídeos do Flow em 720p.
+12. Abrir `shop.tiktok.com/streamer/live/product/dashboard` no navegador e logar com a conta do TikTok Shop — é o gerenciador de lives com métricas e lista de produtos.
+13. Instalar a extensão do autor no navegador.
+14. Baixar e abrir o TikTok Studio no computador; confirmar que a câmera está funcionando.
+15. Na extensão, aba de vídeo: adicionar todos os vídeos baixados, deixar todos mutados e escolher a transição (o autor usa reverse).
+16. Na extensão, aba de áudio: remover tudo, adicionar todas as narrações baixadas, marcar ordem aleatória entre faixas e volume 100%.
+17. Instalar o VB Cable (a extensão traz tutorial) e mutar o áudio do desktop no OBS, já que o OBS captura o som interno mesmo com VB Cable.
+18. Na extensão, ativar o áudio e apontá-lo para o VB Cable.
+19. Ativar o vídeo rotativo na extensão — os clipes começam a rodar.
+20. No TikTok Studio, adicionar origem do tipo "captura de janela", selecionar a janela da extensão/loops e marcar "manter sempre ativo".
+21. Clicar com o botão direito na origem → Camada → Avançar, para que ela fique à frente da câmera (a câmera não aparece). Dar zoom para preencher a tela.
+22. Nas configurações de áudio do TikTok Studio, definir alto-falante e microfone como "Cable".
+23. Iniciar a live pelo TikTok Studio.
+24. Na extensão, configurar o timer de encerramento (ex.: 2 horas) e clicar em "iniciar ciclo".
+25. Ativar a proteção contra violação.
+26. Ativar a moderação de comentários e o bloqueio automático de quem acusar a live de ser gravada, falsa ou feita com IA.
+27. Fixar o produto correto na lista (atenção ao deslocamento causado por cupons na lista) e acompanhar espectadores, GMV e vendas pelo dashboard.
+28. Encerrar a live pela própria extensão ao final do ciclo.
+
+## Ensinamentos e Insights
+
+- A configuração de live automática nativa do Live Studio deixou de funcionar: o TikTok agora identifica live em loop e vídeo gravado repetido.
+- A janela da extensão não pode ser minimizada durante a live — a captura vira tela branca. Pode ser jogada para baixo/fora de foco, mas precisa continuar aberta.
+- Produtos que "se vendem sozinhos" (baratos, úteis, universais) dão mais tração que produtos elaborados.
+- Vale conferir se a qualidade real do produto corresponde ao anúncio, para não fazer propaganda enganosa.
+- O ChatGPT hoje entrega imagens em qualidade suficiente para gerar direto a imagem, sem precisar pedir só o prompt.
+- O Omni entrega vídeos mais fluidos e com melhor frequência de acerto que o VO3 Quality — alguns bugs pontuais ainda aparecem, mas o resultado é utilizável.
+- A narração do ElevenLabs não fica totalmente realista, mas é suficiente para live.
+- Cada geração do ElevenLabs devolve duas variações levemente diferentes — baixar as duas aumenta a variedade do pool de áudio sem custo extra.
+- É possível trabalhar em novos criativos no Flow enquanto a live já está rodando.
+- Existe uma opção de continuar a live por 10-15 minutos após um aviso de violação, mas o autor considera isso risco por conta do usuário e recomenda encerrar.
+
+## Métricas e Números
+
+- Produto de exemplo: 7 toalhas por R$ 11,00.
+- Prompts de animação: pelo menos 3 variações.
+- Geração no Flow: 4 versões por prompt, proporção 9:16.
+- Download dos vídeos: 720p.
+- Narração: 1.000 caracteres por roteiro, 3 versões solicitadas.
+- ElevenLabs plano gratuito: 10.000 créditos por mês (3.800 disponíveis no momento da gravação).
+- ElevenLabs plano pago citado: 30.000 créditos e 20 estúdios, com clonagem de voz.
+- Ajustes de voz usados: velocidade 1.03, estabilidade 52%.
+- Timer de live no exemplo: 2 horas.
+- Extensão: cupom de 10% off na descrição; plano vitalício utilizável em todas as contas do usuário, sem compra por conta.
+- Concorrentes cobrariam cerca de R$ 1.000 por ano por ferramenta equivalente (afirmação do autor).
+- Meta do canal citada: 30 mil inscritos no mês.
+
+## Plataformas e Recursos
+
+- `shop.tiktok.com` — vitrine e pesquisa de produtos do TikTok Shop.
+- `shop.tiktok.com/streamer/live/product/dashboard` — gerenciador de lives: métricas, lista de produtos, espectadores e GMV.
+- **Viral** — mineração de produtos validados para TikTok Shop.
+- **ChatGPT** — geração de imagem, prompts JSON e roteiro de narração.
+- **Flow** — geração de vídeo com VO3 / VO3 Quality / Omni.
+- **ElevenLabs** — narração por IA; plano gratuito e planos pagos.
+- **TikTok Studio (desktop)** — transmissão da live.
+- **OBS** — auxílio no roteamento de áudio/vídeo.
+- **VB Cable** — áudio virtual.
+- **Extensão do autor** — gerenciamento completo da live, com área de membros ensinando a configuração e comunidade no WhatsApp.
+
+## Pontos de Atenção
+
+- O TikTok detecta lives em loop e vídeos gravados repetidos — sem rotação e variação, a live toma violação rapidamente.
+- O fluxo de violação é: aviso primeiro, banimento depois. Ignorar o aviso coloca a conta em risco.
+- Minimizar a janela da extensão quebra a transmissão (tela branca).
+- Mesmo usando VB Cable, o OBS captura o áudio do desktop — é preciso mutar o áudio do desktop manualmente.
+- A câmera precisa estar funcionando no TikTok Studio, mesmo que não apareça na transmissão.
+- Na fixação de produtos, cupons presentes na lista deslocam a numeração: o produto 1 pode virar o produto 2.
+- Erros de digitação nos banners/textos vão ao ar (o autor mostra "Freter" em vez de "Frete grátis").
+- Os vídeos gerados apresentam "bugadinhas" ocasionais.
+- O vídeo é fortemente promocional da extensão paga do próprio autor.
+
+## Checklist Prático
+
+- [ ] Escolher produto barato, útil e fácil de recriar com IA (Viral ou shop.tiktok.com).
+- [ ] Gerar imagem POV do produto no ChatGPT — só mãos, sem pessoas.
+- [ ] Pedir ≥3 prompts JSON de animação com ações diferentes.
+- [ ] Gerar os vídeos no Flow com Omni, 4 versões, 9:16, e baixar em 720p.
+- [ ] Pedir narração de 1.000 caracteres estilo live (parabéns a compradores, qualidades, escassez) + 2 variações.
+- [ ] Gerar as narrações no ElevenLabs testando a primeira frase antes; baixar as duas variações de cada geração.
+- [ ] Instalar VB Cable e mutar o áudio do desktop no OBS.
+- [ ] Carregar todos os vídeos na extensão, mutados, com transição reverse.
+- [ ] Carregar todos os áudios na extensão, ordem aleatória, volume 100%.
+- [ ] Apontar o áudio da extensão para o VB Cable e ativar o vídeo rotativo.
+- [ ] No TikTok Studio, adicionar captura de janela, marcar "manter sempre ativo", avançar camada e dar zoom.
+- [ ] Definir alto-falante e microfone como Cable no TikTok Studio.
+- [ ] Iniciar a live, configurar timer e iniciar ciclo na extensão.
+- [ ] Ativar proteção contra violação e moderação/bloqueio de comentários acusatórios.
+- [ ] Fixar o produto correto conferindo o deslocamento por cupom.
+- [ ] Não minimizar a janela da extensão.
+- [ ] Acompanhar logs, espectadores, GMV e vendas no dashboard.
+- [ ] Encerrar e reabrir a live em caso de aviso de violação.

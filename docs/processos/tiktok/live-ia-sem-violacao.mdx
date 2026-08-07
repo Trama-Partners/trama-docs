@@ -1,0 +1,119 @@
+---
+sidebar_position: 2
+title: Live IA sem violação
+description: Explica o básico de como funciona uma live no TikTok Shop e o método do autor para fazer lives que rodam por horas sem levar aviso de violação
+---
+
+# Método para lives com IA consistentes e sem violação no TikTok Shop
+
+## Resumo
+
+Complemento ao vídeo anterior sobre lives com IA: explica o básico de como funciona uma live no TikTok Shop e o método do autor para fazer lives que rodam por horas sem levar aviso de violação. O segredo central é a construção dos takes — as mãos sempre entram e saem do quadro, nunca começam nem terminam o vídeo em cena, criando sensação de fluidez e naturalidade. Mostra dois caminhos de transmissão: o manual (edição no CapCut gerando um arquivo longo + captura no Live Studio) e o "pulo do gato" da extensão Loops Live, que injeta os vídeos como câmera virtual e o áudio como microfone virtual diretamente no TikTok — o que retarda muito a detecção. Conteúdo declarado como parte da área de membros da Loops.
+
+## Ferramentas
+
+- **ChatGPT ("chat de PT" na transcrição)** — gera o prompt da imagem base a partir da foto do produto + print de uma live concorrente, e depois gera os prompts JSON de animação.
+- **Nano Banana Pro** — modelo de geração de imagem usado para criar a imagem hiper-realista vertical da cena da live.
+- **Flow** — plataforma onde os prompts são executados para gerar imagens e animar os vídeos.
+- **CapCut** — editor usado no método manual para montar takes curtos em um arquivo longo, usando cópia, agrupamento e reverso.
+- **Loops Live (extensão)** — extensão de navegador do autor. Aba de transmissão injeta os vídeos como câmera virtual ("Loops câmera"/"Loops Live") e os áudios como microfone virtual ("Loops microfone") direto no TikTok, com ordem aleatória, picotagem de faixas, cronômetro, banner, proteção contra violação e suporte a múltiplas contas simultâneas.
+- **TikTok Live Studio** — alternativa de transmissão para quem não usa a extensão; também é onde ocorre a captura de janela do método antigo.
+
+## Métodos e Estratégias
+
+- **Mãos entram e saem em todo take**: o segredo do método. Toda animação deve ter as mãos entrando por volta do segundo 1 e saindo antes do fim (segundo 7, 8 ou 10, conforme a duração). Nunca gerar vídeo que comece ou termine com a mão em cena.
+- **Padrão de naturalidade**: mãos entram, mexem no produto, saem, voltam, mexem de novo, saem — o encadeamento simula alguém realmente apresentando ao vivo, não vídeos colados em loop.
+- **Modelagem de lives concorrentes**: printar lives de IA vistas no TikTok e enviá-las ao ChatGPT como referência de cena junto com a foto do produto.
+- **Prompt sempre em código (JSON)**: pedir os prompts de animação em formato estruturado para manter consistência entre os takes.
+- **Manter um formato único**: mesmo que várias imagens sejam geradas, usar o mesmo formato de cena preserva a fluidez da live.
+- **Método manual (CapCut)**: montar 5-6 takes em um arquivo longo (1h a 2h) por meio de copiar, agrupar, aplicar reverso, colar novamente e intercalar outros clipes no meio. Funciona igualmente bem, mas é lento.
+- **Método da extensão (recomendado)**: em vez de um arquivo longo, carregar 4-5 vídeos de 8 segundos e deixar a extensão rodá-los em loop como câmera virtual do TikTok.
+- **Áudio picotado e aleatório**: alternar as faixas de narração em ordem aleatória e picotá-las para o TikTok não identificar repetição.
+- **Múltiplas contas simultâneas**: abrir outra janela do Chrome com outra conta e outra chave da mesma extensão, rodando lives em paralelo.
+- **Timer de encerramento**: definir a duração da live pela extensão em vez de deixar rodando indefinidamente.
+
+## Passo a Passo
+
+1. Escolher o produto e salvar sua foto; capturar também o print de uma live de IA no TikTok que venda produto semelhante.
+2. Enviar as duas imagens ao ChatGPT com o pedido: vender esse produto, a imagem 2 é uma live vendendo algo parecido, criar um prompt para gerar a cena — sem mãos na tela, sem nenhum elemento, sem nenhuma pessoa na imagem.
+3. Copiar o prompt gerado (formato citado: imagem vertical, hiper-realista, proporção 9:16).
+4. Colar no Flow, selecionar a opção de imagem com **Nano Banana Pro** e enviar.
+5. Escolher a imagem gerada que melhor representa a cena da live.
+6. Copiar essa imagem e enviá-la de volta ao ChatGPT pedindo um prompt em JSON para as mãos aparecerem, mexerem no produto e saírem no take final.
+7. Repetir o pedido para cada movimento desejado, sempre com a regra "a mão entra e depois sai, nunca fica".
+8. Gerar os vídeos (8 segundos cada) e conferir se as mãos entram e saem em cada um.
+9. Gerar as narrações de áudio (pelo menos duas faixas para alternar).
+10. **Caminho A — manual (CapCut)**: adicionar as mídias na timeline, selecionar dois clipes, Ctrl+C / Ctrl+V, botão direito → Agrupar, Editar → Reverso; copiar tudo, colar à frente, reverter de novo e intercalar outros clipes no meio, repetindo até chegar a 1h-2h de arquivo. Depois transmitir configurando no Live Studio.
+11. **Caminho B — extensão Loops Live**: abrir a aba de transmissão da extensão.
+12. Adicionar todos os vídeos de 8 segundos como fonte de vídeo.
+13. Adicionar os áudios de narração como fonte de microfone, com ordem aleatória e picotagem de faixas.
+14. Ativar a proteção contra violação.
+15. Clicar em ativar a câmera na extensão.
+16. Iniciar a live no TikTok e selecionar "Loops câmera" como câmera e "Loops microfone" como microfone.
+17. Clicar em iniciar a live.
+18. Configurar cronômetro, banner e demais elementos pela própria extensão.
+19. Para múltiplas contas, abrir outro Chrome com outra conta e outra chave da extensão, rodando em paralelo.
+
+## Ensinamentos e Insights
+
+- Injetar os vídeos como câmera virtual dentro do TikTok faz o algoritmo ler o conteúdo como movimento real acontecendo naquele momento — a detecção demora muito mais do que no método de captura de janela do Live Studio.
+- O método antigo (vídeo rotativo + captura no Live Studio) faz o TikTok identificar e emitir avisos de violação muito mais rápido.
+- Você precisa "provar" ao TikTok que aquilo é tudo menos uma gravação — e isso se consegue com naturalidade nas transições.
+- Vídeos curtos de 8 segundos em loop pela extensão funcionam melhor (e dão muito menos trabalho) que um arquivo editado de uma hora.
+- O método manual no CapCut funciona igualmente bem, mas o software começa a travar conforme o arquivo cresce.
+- Contas paradas podem ser reativadas: o exemplo mostrado estava 3 meses sem postar e voltou a rodar lives.
+- Cliques sem venda indicam problema de oferta, não de criativo: produto chamou atenção, mas preço/oferta não converteu — trocar o produto ou buscar um mais em conta.
+- O nicho é amplo: o autor cita já ter vendido cortina, coberta, edredom e cabeceira.
+- Prints de lives de IA de terceiros são ótima fonte de modelagem, mas criar do zero também funciona.
+
+## Métricas e Números
+
+- Live de exemplo rodou 4 horas contínuas de madrugada, sem nenhum aviso de violação — encerrada apenas pelo timer da extensão.
+- Outra live do exemplo rodando por 2 horas.
+- Resultado da live analisada: 87 cliques e 0 vendas (problema de oferta/preço).
+- Conta usada no teste: 3 meses sem postar antes de voltar.
+- Duração dos vídeos gerados: 8 segundos cada.
+- Quantidade de vídeos na extensão: 4 de um total de 5 gerados.
+- Método CapCut: 5 takes transformados em um arquivo de 1 hora e 11 minutos.
+- Reverso no CapCut em arquivos longos pode levar 20-30 minutos.
+- Imagem gerada: proporção 9:16, hiper-realista.
+- Mãos entram por volta do segundo 1 e saem no segundo 7-10.
+
+## Plataformas e Recursos
+
+- **ChatGPT** — geração de prompts de imagem e de animação em JSON.
+- **Flow** — execução dos prompts de imagem e vídeo.
+- **Nano Banana Pro** — modelo de imagem usado para a cena hiper-realista.
+- **CapCut** — edição manual do arquivo longo (agrupar, reverso, intercalar).
+- **TikTok Live Studio** — transmissão alternativa.
+- **Loops Live** — extensão do autor com câmera/microfone virtual, proteção contra violação, cronômetro, banner e múltiplas chaves. Link e cupom do canal na descrição.
+- **Área de membros da Loops** — aulas passo a passo, grupo de networking, suporte, atualizações e aulas ao vivo.
+- **Comunidade no WhatsApp** — onde o autor promete disponibilizar o prompt usado, além de dicas, estratégias e conteúdos gratuitos. Link no comentário fixado e na descrição.
+
+## Pontos de Atenção
+
+- O método de captura de janela no Live Studio acelera a detecção pelo TikTok e leva a avisos de violação mais rápido.
+- Vídeos que começam ou terminam com as mãos em cena quebram a fluidez e denunciam o loop.
+- O CapCut sofre com arquivos longos: travamentos e reverso demorado (20-30 min).
+- Sem picotagem e ordem aleatória de áudio, o TikTok identifica a repetição.
+- Cliques altos com zero vendas indicam oferta/preço mal calibrados — não insistir no mesmo produto.
+- O timer encerra a live mesmo sem violação; dimensionar a duração desejada.
+- Cada conta adicional exige outra chave da extensão e outro perfil de navegador.
+- Conteúdo é abertamente promocional da extensão Loops Live e da área de membros.
+
+## Checklist Prático
+
+- [ ] Salvar foto do produto e print de uma live de IA de referência.
+- [ ] Pedir ao ChatGPT o prompt da cena: vertical, hiper-realista, 9:16, sem mãos, sem pessoas, sem elementos.
+- [ ] Gerar a imagem no Flow com Nano Banana Pro.
+- [ ] Enviar a imagem de volta ao ChatGPT e pedir prompts JSON de animação.
+- [ ] Garantir em todo prompt: mão entra no segundo 1, sai antes do fim, nunca permanece.
+- [ ] Gerar 4-5 vídeos de 8 segundos mantendo o mesmo formato de cena.
+- [ ] Gerar ao menos 2 faixas de narração.
+- [ ] Carregar os vídeos na aba de transmissão da extensão (câmera virtual).
+- [ ] Carregar os áudios como microfone virtual, ordem aleatória e faixas picotadas.
+- [ ] Ativar a proteção contra violação.
+- [ ] Ativar a câmera na extensão e selecionar "Loops câmera" + "Loops microfone" ao iniciar a live no TikTok.
+- [ ] Configurar cronômetro e banner pela extensão.
+- [ ] Monitorar cliques x vendas: cliques sem venda = trocar produto ou ajustar oferta.
+- [ ] Para escalar, rodar contas adicionais em outro Chrome com outra chave.
