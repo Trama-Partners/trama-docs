@@ -1,0 +1,10 @@
+{
+  "label": "N. Nome da área",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Nome da área",
+    "description": "Uma frase dizendo o que a área cobre e para quem serve.",
+    "slug": "/<processo>/<hub>/<area>"
+  }
+}
