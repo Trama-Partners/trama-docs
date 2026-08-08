@@ -1,0 +1,58 @@
+---
+sidebar_position: 2
+title: Vídeo POV com Google Flow
+description: Fluxo de desktop para gerar vídeo POV de produto com prompt estruturado no ChatGPT e geração no Google Flow.
+---
+
+# Vídeo POV de produto com Google Flow
+
+Variação do [fluxo mobile](./video-ia-no-celular.mdx) com mais controle sobre a cena. Em vez de
+animar uma foto composta com um prompt curto, aqui o ChatGPT escreve um **prompt POV
+estruturado** e a geração acontece no **Google Flow** (`labs.google`).
+
+## Ferramentas
+
+| Ferramenta | Papel |
+|---|---|
+| **TikTok Shop** | Origem do print do produto |
+| **Google Flow** (`labs.google`) | Geração de vídeo por IA a partir da imagem do produto + comando de cenário |
+| **ChatGPT** | Escreve o prompt POV com movimentos naturais |
+| **YouTube Create** | Alternativa de geração, recebendo imagem + prompt |
+
+## Passo a passo
+
+1. Vá ao TikTok Shop, escolha o produto e tire print.
+2. Abra o Google Flow e adicione a imagem com o comando/cenário desejado.
+3. Envie a imagem ao ChatGPT e peça um **prompt POV de até 900 caracteres**, com movimentos
+   naturais e mostrando os detalhes do produto.
+4. Coloque imagem + prompt no gerador (YouTube Create ou o próprio Flow) e gere.
+5. Vídeo pronto para postar.
+
+## Por que POV
+
+O formato POV mostra **apenas mãos e o produto** — nenhuma pessoa, nenhum avatar em cena. Isso:
+
+- evita o "vale da estranheza" de avatares gerados por IA;
+- simplifica muito a geração, porque não há rosto para o modelo errar;
+- é o mesmo formato usado na produção de ativos para live — ver
+  [Produção dos ativos da live](../lives/producao-dos-ativos.mdx), onde a técnica é detalhada
+  com a regra das mãos entrando e saindo do quadro.
+
+## Modelos de geração
+
+O Flow permite escolher o modelo. Referências das fontes:
+
+| Modelo | Observação |
+|---|---|
+| **Omni / OmniFlash** | Preferido pelos autores — vídeos mais fluidos e maior frequência de acerto |
+| **Google VO3 / VO3 Quality** | Funciona, mas com resultado inferior ao Omni |
+| **Nano Banana Pro** | Modelo de **imagem** (não de vídeo), usado para gerar a cena base hiper-realista |
+
+## Pontos de atenção
+
+- O prompt POV limitado a 900 caracteres é a recomendação da fonte — prompts maiores não foram
+  testados no material.
+- Vídeos gerados apresentam falhas ocasionais; gere mais versões do que precisa e descarte as
+  ruins.
+- Erros de digitação em banners e textos vão ao ar — o material mostra um caso de "Freter" em
+  vez de "Frete grátis".

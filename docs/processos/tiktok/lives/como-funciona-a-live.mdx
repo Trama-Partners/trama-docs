@@ -1,0 +1,76 @@
+---
+sidebar_position: 1
+title: Como funciona a live
+description: Mecânica do live commerce no TikTok Shop — sacolinha, produto fixado, dashboard do streamer e otimização por dados em tempo real.
+---
+
+# Como funciona uma live no TikTok Shop
+
+## A mecânica básica
+
+Uma live de TikTok Shop tem três elementos que produzem venda:
+
+| Elemento | O que é |
+|---|---|
+| **Sacolinha** | Lista de produtos da live. O espectador clica e compra sem sair da transmissão |
+| **Produto fixado** | Item destacado na tela. É o que a maioria compra — a escolha do fixado é a alavanca principal |
+| **Dashboard do streamer** | Painel com métricas em tempo real: espectadores, cliques por item, GMV e vendas |
+
+O gerenciador de lives fica em:
+
+```
+shop.tiktok.com/streamer/live/product/dashboard
+```
+
+É onde você acompanha métricas, gerencia a lista de produtos e vê espectadores e GMV.
+
+## Otimização por dados da sacolinha
+
+A decisão de qual produto fixar deve seguir **dado, não palpite**:
+
+1. Acompanhe o painel administrativo durante a live.
+2. Observe em quais itens da sacolinha a audiência está clicando.
+3. Se o item 2 (ou qualquer outro que não o fixado) concentra os cliques, **troque o produto
+   fixado por ele**.
+4. Continue monitorando e ajustando conforme os dados.
+
+:::warning Cupom desloca a numeração
+Cupons presentes na lista deslocam a posição dos itens: o produto 1 pode virar o produto 2.
+Confira sempre antes de fixar.
+:::
+
+Se os cliques são altos e as vendas são zero, o problema não é o produto fixado nem o criativo —
+é a oferta. Ver [Mineração e escolha de produto](../produtos/mineracao-e-escolha-de-produto.mdx).
+
+## Os modelos de operação de live
+
+| Modelo | Como funciona | Custo operacional |
+|---|---|---|
+| **Live humana / estúdio** | Vendedor ao vivo apresentando produto. Modelo dos estúdios profissionais (4 rodando, 6 até o fim do mês, no exemplo) | Alto — pessoas, estúdio, escala |
+| **Live gravada** | A "live" roda material gravado, sem operador. Ferramenta citada: **Live O Live** (topo e base da tela com gravação) | Baixo |
+| **Live com IA** | Vídeos gerados por IA rodando em loop com narração sintética | Baixo — é o método detalhado nesta área |
+
+Resultado declarado para live gravada com Live O Live: **8 vendas em 3 horas**, sem operação
+humana.
+
+:::danger Live gravada conflita com a política
+Apresentar conteúdo gravado como live entra em conflito direto com as regras do TikTok Live —
+imagens estáticas, loops, narração por IA e áudio pré-gravado são explicitamente proibidos.
+Ver [Regras de live e conteúdo de IA](../conformidade/regras-de-live-e-conteudo-ia.mdx). As
+fontes não abordam esse conflito.
+:::
+
+## O que mudou recentemente
+
+A configuração de live automática **nativa do Live Studio deixou de funcionar**: o TikTok passou
+a identificar live em loop e vídeo gravado repetido. É isso que motivou os dois métodos
+alternativos de transmissão documentados aqui:
+
+- [Transmissão por captura de janela](./transmissao-captura-de-janela.mdx) — método mais antigo,
+  detecção mais rápida.
+- [Transmissão por câmera virtual](./transmissao-camera-virtual.mdx) — método atual recomendado.
+
+## Próximo passo
+
+Antes de transmitir, é preciso ter os vídeos e as narrações:
+[Produção dos ativos da live](./producao-dos-ativos.mdx).

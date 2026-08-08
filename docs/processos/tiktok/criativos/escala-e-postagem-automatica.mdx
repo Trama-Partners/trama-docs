@@ -1,0 +1,59 @@
+---
+sidebar_position: 4
+title: Escala e postagem automática
+description: Pipeline de download em massa, edição automática em lote e agendamento no SpeedPost para rodar dezenas de perfis anônimos.
+---
+
+# Escalar perfis anônimos automatizados
+
+Pipeline para replicar perfis que já viralizaram, em volume, sem aparecer:
+**download em massa → edição automática em lote → postagem agendada**.
+
+O projeto citado nas fontes tem meta de **100 perfis anônimos** (estava na conta nº 9 no momento
+da gravação). O perfil de referência copiado no exemplo cresceu **125.000 seguidores em 7 dias**.
+
+## Ferramentas
+
+| Ferramenta | Papel | Observação |
+|---|---|---|
+| **Extensão de download em massa do TikTok** | Baixa ~100 vídeos de um perfil de referência de uma vez | ⚠️ **Nome não informado** na fonte |
+| **Editor automático de vídeo** | Recebe os vídeos + fundo e devolve o lote editado | ⚠️ **Nome não informado** na fonte |
+| **SpeedPost** (`speedpost.com.br`) | Postagem automática e agendada em massa | Sobe os vídeos, define o volume diário e cola a agenda |
+
+## Passo a passo
+
+1. Encontre um perfil de referência que viralizou no nicho (exemplo citado: perfil do
+   Ronaldinho).
+2. Baixe ~100 vídeos com a extensão de download em massa.
+3. Crie um fundo/template igual ao do perfil copiado.
+4. Jogue todos os vídeos no editor automático.
+5. Clique em processar — sai o lote editado (**150 vídeos** no exemplo).
+6. Acesse `speedpost.com.br` e suba os vídeos.
+7. Defina quantos vídeos postar por dia.
+8. Cole a agenda de postagem e confirme.
+9. A conta passa a postar sozinha, sem você aparecer.
+
+## Pontos de atenção
+
+:::danger Risco de direitos autorais
+Copiar perfis e baixar vídeos de terceiros em massa levanta risco de **direitos autorais e de
+penalização da plataforma**. Nenhuma das fontes aborda esse ponto. Verifique os direitos de uso
+antes de reaproveitar material.
+:::
+
+- Este pipeline **contradiz** o princípio de "recriar em vez de repostar" descrito em
+  [Ativação da conta](../fundamentos/ativacao-da-conta.mdx) — ali a fonte afirma que repostar sem
+  edição real não performa. Aqui a "edição" é automática e superficial (fundo/template). Trate
+  o volume como compensação da queda de qualidade, não como equivalente.
+- **Duas ferramentas do pipeline não têm nome informado** nas transcrições — é preciso encontrar
+  substitutos antes de conseguir executar.
+
+## Checklist
+
+- [ ] Escolher perfil de referência que já viralizou no nicho
+- [ ] Baixar o lote de vídeos
+- [ ] Criar o fundo/template do perfil
+- [ ] Processar tudo no editor automático
+- [ ] Subir o lote no SpeedPost, definir volume diário e agenda
+- [ ] Verificar direitos de uso do material antes de publicar
+- [ ] Abrir novos perfis assim que o modelo estiver validado

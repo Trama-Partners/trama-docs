@@ -1,0 +1,95 @@
+---
+sidebar_position: 3
+title: Transmissão por câmera virtual (recomendado)
+description: Método que injeta os vídeos como câmera virtual e os áudios como microfone virtual direto no TikTok, retardando muito a detecção.
+---
+
+# Transmissão por câmera virtual
+
+Método **recomendado** pelas fontes. Em vez de capturar uma janela no Live Studio, a extensão
+injeta os vídeos como **câmera virtual** e as narrações como **microfone virtual** direto no
+TikTok.
+
+## Por que funciona melhor
+
+Injetar o vídeo como câmera virtual faz o algoritmo ler o conteúdo como **movimento real
+acontecendo naquele momento**. A detecção demora muito mais do que no
+[método de captura de janela](./transmissao-captura-de-janela.mdx), onde o TikTok identifica e
+emite avisos de violação bem mais rápido.
+
+Vantagem prática adicional: 4-5 clipes de 8 segundos em loop funcionam melhor — e dão muito
+menos trabalho — do que montar um arquivo editado de uma hora.
+
+## Ferramenta
+
+**Loops Live** — extensão de navegador criada pelo autor das fontes. A aba de transmissão
+disponibiliza:
+
+| Recurso | Descrição |
+|---|---|
+| Câmera virtual | Aparece no TikTok como "Loops câmera" / "Loops Live" |
+| Microfone virtual | Aparece como "Loops microfone" |
+| Ordem aleatória | Alterna as faixas de narração sem padrão fixo |
+| Picotagem de faixas | Fatia os áudios para o TikTok não identificar repetição |
+| Cronômetro | Timer de encerramento da live |
+| Banner | Elementos visuais sobre a transmissão |
+| Proteção contra violação | Encerra a live ao detectar aviso |
+| Múltiplas contas | Uma chave por conta, rodando lives em paralelo |
+
+Existe também uma **área de membros** com aulas passo a passo, grupo de networking, suporte,
+atualizações e aulas ao vivo. Link e cupom do canal ficam na descrição dos vídeos.
+
+## Passo a passo
+
+Pré-requisito: ter o pool de clipes e narrações pronto — ver
+[Produção dos ativos](./producao-dos-ativos.mdx).
+
+1. Abra a aba de transmissão da extensão.
+2. Adicione todos os vídeos de 8 segundos como **fonte de vídeo**.
+3. Adicione os áudios de narração como **fonte de microfone**, com **ordem aleatória** e
+   **picotagem de faixas** ativadas.
+4. Ative a **proteção contra violação**.
+5. Clique em **ativar a câmera** na extensão.
+6. Inicie a live no TikTok e selecione:
+   - Câmera → **Loops câmera**
+   - Microfone → **Loops microfone**
+7. Clique em iniciar a live.
+8. Configure cronômetro, banner e demais elementos pela própria extensão.
+9. Para múltiplas contas, abra outro Chrome com outra conta e **outra chave** da extensão,
+   rodando em paralelo.
+
+## Resultados declarados
+
+| Métrica | Valor |
+|---|---|
+| Live de exemplo | 4 horas contínuas de madrugada, **sem nenhum aviso de violação** — encerrada só pelo timer |
+| Outra live do exemplo | 2 horas rodando |
+| Conta usada no teste | 3 meses sem postar antes de voltar a rodar lives |
+| Clipes carregados | 4 dos 5 gerados |
+| Resultado comercial da live analisada | 87 cliques, 0 vendas — problema de oferta, não do método |
+
+Contas paradas podem ser reativadas: o exemplo mostrado estava 3 meses sem postar.
+
+## Pontos de atenção
+
+- Cada conta adicional exige **outra chave da extensão e outro perfil de navegador**.
+- Sem picotagem e ordem aleatória de áudio, o TikTok identifica a repetição.
+- O timer encerra a live mesmo sem violação — dimensione a duração desejada.
+- O conteúdo de origem é abertamente promocional da extensão e da área de membros.
+- Ver também os riscos de política em
+  [Regras de live e conteúdo de IA](../conformidade/regras-de-live-e-conteudo-ia.mdx).
+
+## Checklist
+
+- [ ] Carregar os vídeos na aba de transmissão (câmera virtual)
+- [ ] Carregar os áudios como microfone virtual, ordem aleatória e faixas picotadas
+- [ ] Ativar a proteção contra violação
+- [ ] Ativar a câmera na extensão
+- [ ] Selecionar "Loops câmera" + "Loops microfone" ao iniciar a live no TikTok
+- [ ] Configurar cronômetro e banner pela extensão
+- [ ] Para escalar, rodar contas adicionais em outro Chrome com outra chave
+
+## Próximo passo
+
+[Operação e escala da live](./operacao-e-escala.mdx) — moderação, proteção contra violação e
+o que monitorar enquanto roda.

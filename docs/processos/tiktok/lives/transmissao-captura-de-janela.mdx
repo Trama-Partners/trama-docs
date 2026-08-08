@@ -1,0 +1,94 @@
+---
+sidebar_position: 4
+title: Transmissão por captura de janela
+description: Método anterior com TikTok Studio, OBS e VB Cable — mais trabalhoso e com detecção mais rápida, incluindo a variante manual no CapCut.
+---
+
+# Transmissão por captura de janela
+
+Método **anterior** ao de [câmera virtual](./transmissao-camera-virtual.mdx). Continua
+funcionando, mas o TikTok identifica o padrão e emite avisos de violação **muito mais rápido**.
+Documentado aqui para referência e para quem não usa a extensão de câmera virtual.
+
+A ideia: uma extensão de navegador roda os vídeos em rotação numa janela, o **TikTok Studio**
+captura essa janela como origem de vídeo, e o áudio é roteado por um cabo virtual.
+
+## Ferramentas
+
+| Ferramenta | Papel |
+|---|---|
+| **TikTok Studio (desktop)** | Software oficial de transmissão. Recebe a captura de janela e o áudio |
+| **OBS** | Auxilia no roteamento de áudio/vídeo junto com o VB Cable |
+| **VB Cable** | Driver de áudio virtual — o som sai para a live sem tocar nas caixas de som |
+| **Extensão gerenciadora de live** | Rotação de vídeos e áudios, timer, moderação, fixação de produtos, logs e proteção contra violação |
+
+:::note Sobre a extensão
+Na fonte deste método a extensão é citada apenas como "extensão do autor", sem nome. Pelos
+recursos descritos, é provavelmente a mesma **Loops Live** documentada no método de câmera
+virtual — mas isso não é afirmado na transcrição.
+:::
+
+## Passo a passo
+
+Pré-requisito: pool de clipes e narrações pronto — ver
+[Produção dos ativos](./producao-dos-ativos.mdx).
+
+### Preparar o ambiente
+
+1. Abra `shop.tiktok.com/streamer/live/product/dashboard` no navegador e faça login com a conta
+   do TikTok Shop.
+2. Instale a extensão no navegador.
+3. Baixe e abra o TikTok Studio no computador; confirme que a **câmera está funcionando** (ela
+   não aparece na transmissão, mas precisa estar ativa).
+4. Instale o **VB Cable** e **mute o áudio do desktop no OBS** — o OBS captura o som interno
+   mesmo com o VB Cable instalado.
+
+### Configurar a extensão
+
+5. Aba de vídeo: adicione todos os vídeos baixados, deixe **todos mutados** e escolha a transição
+   (o autor usa **reverse**).
+6. Aba de áudio: remova tudo, adicione todas as narrações, marque **ordem aleatória** entre
+   faixas e **volume 100%**.
+7. Ative o áudio e aponte-o para o **VB Cable**.
+8. Ative o **vídeo rotativo** — os clipes começam a rodar na janela.
+
+### Configurar o TikTok Studio
+
+9. Adicione uma origem do tipo **captura de janela** e selecione a janela da extensão/loops.
+10. Marque **"manter sempre ativo"**.
+11. Botão direito na origem → **Camada → Avançar**, para que ela fique à frente da câmera. Dê
+    zoom até preencher a tela.
+12. Nas configurações de áudio, defina **alto-falante e microfone como "Cable"**.
+13. Inicie a live pelo TikTok Studio.
+14. Na extensão, configure o timer de encerramento (ex.: 2 horas) e clique em **iniciar ciclo**.
+
+Depois disso, siga para [Operação e escala da live](./operacao-e-escala.mdx).
+
+## Variante manual: arquivo longo no CapCut
+
+Alternativa sem rotação automática — monta um arquivo único de 1h a 2h e transmite por captura
+no Live Studio. Funciona igualmente bem, mas é lento.
+
+1. Adicione as mídias na timeline do CapCut.
+2. Selecione dois clipes → `Ctrl+C` / `Ctrl+V`.
+3. Botão direito → **Agrupar**.
+4. **Editar → Reverso**.
+5. Copie tudo, cole à frente, reverta de novo e **intercale outros clipes no meio**.
+6. Repita até chegar a 1h-2h de arquivo.
+7. Configure a transmissão no Live Studio.
+
+Referência do exemplo: **5 takes viraram um arquivo de 1 hora e 11 minutos**.
+
+:::warning CapCut trava em arquivo longo
+Conforme o arquivo cresce, o CapCut começa a travar. A operação de reverso em arquivos longos
+pode levar **20 a 30 minutos**.
+:::
+
+## Pontos de atenção
+
+- **Não minimize a janela da extensão** durante a live — a captura vira tela branca. Pode ser
+  jogada para baixo ou perder o foco, mas precisa continuar aberta.
+- Mesmo com VB Cable, o OBS captura o áudio do desktop — é preciso mutar manualmente.
+- A câmera precisa estar funcionando no TikTok Studio mesmo sem aparecer na transmissão.
+- Este método acelera a detecção pelo TikTok em relação à câmera virtual. Se puder escolher,
+  use [câmera virtual](./transmissao-camera-virtual.mdx).

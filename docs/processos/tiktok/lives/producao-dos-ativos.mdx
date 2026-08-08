@@ -1,0 +1,138 @@
+---
+sidebar_position: 2
+title: Produção dos ativos
+description: Como gerar a imagem base, os takes de vídeo com a regra das mãos e as faixas de narração que alimentam a live de IA.
+---
+
+# Produzir os vídeos e áudios da live
+
+Antes de qualquer transmissão você precisa de um **pool de ativos**: um punhado de clipes curtos
+e várias faixas de narração. A qualidade desse pool é o que faz a live durar horas sem aviso de
+violação.
+
+## Ferramentas
+
+| Ferramenta | Papel |
+|---|---|
+| **ChatGPT** | Gera a imagem do produto ou o prompt da cena, os prompts JSON de animação e o roteiro de narração |
+| **Nano Banana Pro** | Modelo de imagem usado para criar a cena hiper-realista vertical da live |
+| **Flow** (Google) | Executa os prompts — gera a imagem e anima os vídeos |
+| **Omni / OmniFlash** | Modelo de vídeo preferido no Flow: mais fluido e com melhor taxa de acerto que o VO3 Quality |
+| **ElevenLabs** | Narração por IA (texto para fala), com ajuste de voz, velocidade e estabilidade |
+
+## Etapa 1 — Imagem base da cena
+
+Há dois caminhos, dependendo de quanto controle você quer:
+
+### Caminho direto (produto sobre fundo)
+
+1. Copie a imagem do produto do anúncio.
+2. Cole no ChatGPT e peça a geração de uma nova imagem especificando:
+   - cenário bem iluminado;
+   - formato **POV**;
+   - **apenas mãos e produto**, sem pessoas nem avatares;
+   - produto disposto como está no anúncio (ex.: toalhas empilhadas);
+   - espaço livre para trabalhar o movimento das mãos.
+
+O ChatGPT hoje entrega imagem em qualidade suficiente para gerar direto — não é mais preciso
+pedir só o prompt.
+
+### Caminho modelado (cena de live concorrente)
+
+1. Salve a foto do produto **e** um print de uma live de IA no TikTok que venda produto parecido.
+2. Envie as duas ao ChatGPT: *"vender esse produto; a imagem 2 é uma live vendendo algo parecido;
+   crie um prompt para gerar a cena — sem mãos na tela, sem nenhum elemento, sem nenhuma pessoa
+   na imagem"*.
+3. Copie o prompt gerado (formato citado: imagem vertical, hiper-realista, proporção 9:16).
+4. Cole no Flow, selecione geração de imagem com **Nano Banana Pro** e envie.
+5. Escolha a imagem que melhor representa a cena da live.
+
+Prints de lives de IA de terceiros são ótima fonte de modelagem, mas criar do zero também
+funciona.
+
+## Etapa 2 — Prompts de animação em JSON
+
+Envie a imagem escolhida de volta ao ChatGPT e peça os prompts de animação **em formato JSON** —
+o formato estruturado mantém consistência entre os takes.
+
+Peça **no mínimo 3 variações com ações diferentes** (pegar e esticar a toalha de cima, passar a
+mão nas toalhas, etc.) para gerar variedade visual.
+
+### 🔑 A regra das mãos — o segredo do método
+
+> Toda animação deve ter as mãos **entrando por volta do segundo 1 e saindo antes do fim**
+> (segundo 7, 8 ou 10, conforme a duração). **Nunca** gere vídeo que comece ou termine com a mão
+> em cena.
+
+O encadeamento resultante — mãos entram, mexem no produto, saem, voltam, mexem de novo, saem —
+simula alguém realmente apresentando ao vivo, em vez de vídeos colados em loop. É o que
+"prova" ao TikTok que aquilo é tudo menos uma gravação.
+
+Repita o pedido de prompt para cada movimento desejado, sempre com a regra "a mão entra e depois
+sai, nunca fica".
+
+## Etapa 3 — Gerar os vídeos
+
+No Flow:
+
+| Parâmetro | Valor usado nas fontes |
+|---|---|
+| Modelo | **Omni** (preferido sobre VO3 Quality) |
+| Versões por prompt | 4 |
+| Proporção | 9:16 |
+| Duração por clipe | 8 segundos |
+| Download | 720p |
+| Quantidade final | 4 a 5 clipes aproveitados |
+
+Confira clipe a clipe se as mãos entram e saem. Mantenha **o mesmo formato de cena** em todos —
+mesmo que várias imagens sejam geradas, o formato único preserva a fluidez.
+
+Os clipes entram na live **mutados**: todo o som vem das faixas de narração.
+
+## Etapa 4 — Narração no ElevenLabs
+
+1. Peça ao ChatGPT uma narração de **1.000 caracteres** no estilo de live: vendendo o produto,
+   parabenizando compradores pelo nome, citando qualidades e aplicando escassez. Solicite mais
+   **2 versões** do mesmo áudio.
+2. Acesse o ElevenLabs em modo texto-para-fala.
+3. Escolha uma voz compatível com o perfil da conta (no exemplo, voz feminina "Jéssica").
+4. **Teste apenas a primeira frase** para calibrar tonalidade, velocidade e estabilidade antes de
+   gerar tudo. Valores do exemplo: **velocidade 1.03, estabilidade 52%**.
+5. Gere cada versão e **baixe as duas variações** que o ElevenLabs entrega por geração — dobra o
+   pool de áudio sem custo extra.
+
+| Plano ElevenLabs | Créditos | Extras |
+|---|---|---|
+| Gratuito | 10.000/mês | — |
+| Pago citado | 30.000 | 20 estúdios, clonagem de voz |
+
+A narração não fica totalmente realista, mas é suficiente para live.
+
+## Pontos de atenção
+
+- Sem rotação e variação, o TikTok identifica a repetição rapidamente. O pool precisa ter
+  volume e variedade.
+- Os vídeos gerados apresentam falhas ocasionais — gere mais do que precisa e descarte.
+- Erros de digitação em banners e textos vão ao ar (o material mostra "Freter" em vez de
+  "Frete grátis").
+- É possível continuar gerando criativos no Flow **enquanto a live já está rodando**, e ir
+  adicionando à rotação — inclusive para transformar a live em multiproduto, trocando o produto
+  fixado conforme o vídeo correspondente aparece.
+
+## Checklist
+
+- [ ] Salvar foto do produto (e print de live de referência, se for modelar)
+- [ ] Gerar a imagem base POV — sem pessoas, sem avatares, espaço para as mãos
+- [ ] Pedir ≥3 prompts JSON de animação com ações diferentes
+- [ ] Garantir em todo prompt: mão entra no segundo 1, sai antes do fim, nunca permanece
+- [ ] Gerar 4-5 clipes de 8s no Flow com Omni, 4 versões, 9:16, e baixar em 720p
+- [ ] Conferir clipe a clipe se as mãos entram e saem
+- [ ] Pedir narração de 1.000 caracteres estilo live + 2 variações
+- [ ] Calibrar voz no ElevenLabs testando a primeira frase antes de gerar tudo
+- [ ] Baixar as duas variações de cada geração
+
+## Próximo passo
+
+Escolha o método de transmissão:
+[câmera virtual (recomendado)](./transmissao-camera-virtual.mdx) ou
+[captura de janela](./transmissao-captura-de-janela.mdx).
