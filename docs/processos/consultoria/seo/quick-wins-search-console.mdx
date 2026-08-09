@@ -1,69 +1,54 @@
 ---
 sidebar_position: 1
 title: SEO Search Console + IA
-description: Como encontrar quick wins de SEO cruzando Google Search Console com IA.
+description: Como achar e executar quick wins de SEO cruzando dados do Google Search Console com análise por IA
 ---
 
-# SEO: Search Console + IA
+# SEO: quick wins com Search Console + IA
 
-:::info[Objetivo]
-Identificar palavras-chave em que o site já está próximo das primeiras posições do Google
-e otimizar rapidamente a página para ganhar posições.
-:::
+Identificar palavras-chave em que o site **já está próximo das primeiras posições** do Google e
+otimizar a página existente para ganhar posição.
 
----
+O maior erro em SEO é tentar ranquear para palavras totalmente novas. É muito mais rápido
+melhorar páginas que **já aparecem no Google** mas estão entre as posições **8 e 20** — os
+chamados *quick wins*, que geram o resultado mais rápido com o menor esforço.
 
-## Etapa 1: Acesse o Google Search Console
+```
+Search Console → filtrar posições 8–20 → exportar consultas → analisar com IA
+      → escolher palavra → encontrar a página → otimizar conteúdo
+      → solicitar indexação → monitorar → repetir
+```
 
-1. Entre no **Google Search Console**.
-2. No menu lateral, clique em **Desempenho** (Resultados da Pesquisa).
+## Ferramentas
 
----
+| Ferramenta | Papel | Link |
+|---|---|---|
+| **Google Search Console** | Fonte dos dados: consultas, cliques, impressões e posição média | `https://search.google.com/search-console` |
+| **IA de sua preferência** | Prioriza as palavras e justifica o potencial de cada uma. ChatGPT, Claude ou Gemini — ver [catálogo de ferramentas](../../shared/ferramentas/catalogo.mdx) | — |
 
-## Etapa 2: Ative a métrica de posição
+## Passo a passo
 
-Na parte superior do relatório, habilite:
+1. Entre no **Google Search Console** e, no menu lateral, clique em **Desempenho**
+   (Resultados da Pesquisa).
+2. Na parte superior do relatório, habilite as métricas **Cliques**, **Impressões** e
+   **Posição média**.
+3. Role até a tabela de **Consultas**, clique em **+ Novo** (ou **Filtro**) e escolha **Posição**.
+   Filtre por **maior que 8** e **menor que 20** — a faixa que representa a segunda página e o fim
+   da primeira.
+4. Exporte ou copie as consultas exibidas. Você precisa das colunas: palavra-chave, cliques,
+   impressões e posição média.
+5. Abra sua IA e envie os dados com o [prompt de análise](#prompt-de-análise).
+6. Escolha uma palavra-chave a partir da lista priorizada pela IA.
+7. Volte ao Search Console, clique na palavra escolhida e abra a aba **Páginas** — ali aparece a
+   URL que o Google já está exibindo para aquele termo.
+8. Abra essa página e faça pequenos ajustes, posicionando a palavra-chave conforme as
+   [regras abaixo](#regras-que-importam).
+9. Publique, copie a URL, vá em **Inspeção de URL** no Search Console, cole o endereço, aguarde a
+   análise e clique em **Solicitar indexação**.
+10. Acompanhe posição média, cliques, impressões e CTR. Se a página subir, repita o processo com
+    outra palavra-chave.
 
-- ✅ Cliques
-- ✅ Impressões
-- ✅ Posição média
-
----
-
-## Etapa 3: Filtre pelas palavras próximas de ranquear
-
-1. Role até a tabela de **Consultas**.
-2. Clique em **+ Novo** ou **Filtro**.
-3. Escolha **Posição**.
-4. Filtre pelas posições que representam oportunidades rápidas.
-
-Sugestão:
-
-- **Maior que:** 8
-- **Menor que:** 20
-
-Assim você verá palavras que já aparecem na segunda página ou no final da primeira página do Google.
-
----
-
-## Etapa 4: Exporte os dados
-
-Copie ou exporte as consultas exibidas.
-
-Você precisará das colunas:
-
-- Palavra-chave
-- Cliques
-- Impressões
-- Posição média
-
----
-
-## Etapa 5: Analise com IA
-
-Abra sua IA favorita (ChatGPT, Claude, Gemini etc.) e envie os dados usando este prompt:
-
-### Prompt
+## Prompt de análise
 
 ```text
 Meu negócio é este site:
@@ -86,99 +71,50 @@ Para cada palavra explique:
 - nível de prioridade.
 ```
 
----
+## Regras que importam
 
-## Etapa 6: Escolha uma palavra-chave
+**Ao escolher a palavra-chave**, priorize a que reúne as três condições:
 
-Após a análise da IA:
+- muitas impressões;
+- posição perto da primeira página;
+- relevância real para o negócio.
 
-Escolha uma palavra-chave que:
-
-- tenha muitas impressões;
-- esteja perto da primeira página;
-- faça sentido para seu negócio.
-
----
-
-## Etapa 7: Descubra qual página já ranqueia
-
-Volte ao Google Search Console.
-
-1. Clique na palavra-chave escolhida.
-2. Abra a aba **Páginas**.
-
-Ali aparecerá a URL que já está sendo exibida pelo Google.
-
----
-
-## Etapa 8: Otimize a página
-
-Abra essa página e faça pequenos ajustes.
-
-A palavra-chave deve aparecer:
+**Ao otimizar a página**, a palavra-chave deve aparecer:
 
 - no início do título;
 - nos primeiros parágrafos;
 - em um subtítulo (H2 ou H3), se fizer sentido;
 - naturalmente ao longo do conteúdo.
 
-⚠️ Não faça "keyword stuffing". Escreva de forma natural.
+## Pontos de atenção
 
----
+:::warning[Nada de keyword stuffing]
+Repetir a palavra-chave de forma artificial derruba a qualidade do texto e pode penalizar a
+página. Escreva de forma natural — a densidade não é o que faz subir.
+:::
 
-## Etapa 9: Solicite uma nova indexação
+- **Resultado não é imediato.** A reavaliação leva de alguns dias a algumas semanas após a
+  solicitação de indexação. Não refaça a otimização antes disso.
+- **Mirar palavra nova é o erro mais caro.** Sem histórico de impressão, não há quick win — é
+  projeto de conteúdo, não otimização.
+- **Solicitar indexação não garante reindexação imediata** nem melhora de posição; apenas coloca a
+  URL na fila.
 
-Depois de publicar as alterações:
+## Checklist
 
-1. Copie a URL.
-2. Vá para **Inspeção de URL** no Search Console.
-3. Cole a URL.
-4. Aguarde a análise.
-5. Clique em **Solicitar indexação**.
+- [ ] Abrir o relatório de Desempenho no Search Console
+- [ ] Habilitar cliques, impressões e posição média
+- [ ] Filtrar consultas por posição maior que 8 e menor que 20
+- [ ] Exportar as consultas com as quatro colunas
+- [ ] Rodar o prompt de análise na IA
+- [ ] Escolher uma palavra com impressão alta e relevância para o negócio
+- [ ] Identificar a URL que já ranqueia pela aba Páginas
+- [ ] Ajustar título, primeiros parágrafos e subtítulo com a palavra-chave
+- [ ] Publicar e solicitar indexação pela Inspeção de URL
+- [ ] Agendar a conferência de posição, cliques, impressões e CTR
+- [ ] Repetir com a próxima palavra da lista priorizada
 
----
+## Relacionado
 
-## Etapa 10: Acompanhe os resultados
-
-Após alguns dias ou semanas, acompanhe:
-
-- posição média;
-- cliques;
-- impressões;
-- CTR.
-
-Se a página subir posições, repita o processo com outra palavra-chave.
-
----
-
-## Fluxo resumido
-
-```
-Search Console
-        ↓
-Filtrar posições 8–20
-        ↓
-Exportar consultas
-        ↓
-Analisar com IA
-        ↓
-Escolher palavra
-        ↓
-Encontrar a página
-        ↓
-Otimizar conteúdo
-        ↓
-Solicitar indexação
-        ↓
-Monitorar resultados
-        ↓
-Repetir
-```
-
----
-
-## 💡 Dica
-
-O maior erro é tentar ranquear para palavras totalmente novas.
-
-Normalmente é muito mais rápido melhorar páginas que **já aparecem no Google**, mas ainda estão entre as posições **8 e 20**. Esses são os chamados **Quick Wins de SEO**, que costumam gerar os resultados mais rápidos com o menor esforço.
+- [Catálogo de ferramentas](../../shared/ferramentas/catalogo.mdx) — as IAs usadas na etapa de
+  análise e o resto do ferramental do time.
