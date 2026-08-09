@@ -1,0 +1,64 @@
+---
+sidebar_position: 3
+title: Vídeos para Airbnb
+description: Pipeline que filtra imóveis de alto padrão, gera vídeo do anúncio com IA e oferece ao anfitrião pela própria plataforma
+---
+
+# Vender vídeos de IA para anfitriões de Airbnb
+
+Filtra os imóveis mais caros da cidade, usa as fotos do anúncio para gerar um vídeo com IA e
+oferece ao anfitrião por mensagem na própria plataforma. Aplica o
+[modelo de venda com entregável pronto](./modelo-de-venda.mdx).
+
+## Ferramentas
+
+| Ferramenta | Papel |
+|---|---|
+| **Airbnb** | Fonte de leads de alto padrão e banco de fotos dos imóveis |
+| **Google Flow** (`labs.google`) | Gera o vídeo por IA a partir das fotos + prompt |
+
+Detalhes e links em [Ferramentas](../ferramentas/catalogo.mdx).
+
+## Passo a passo
+
+1. Abra o Airbnb e escolha a cidade (exemplo usado: São Paulo).
+2. Aplique filtro pelos imóveis mais caros — imóveis melhores e mais espaçosos rendem vídeo melhor
+   e anfitrião com mais capacidade de pagar.
+3. Escolha um anúncio de alto padrão e copie **todas** as fotos.
+4. Abra o Google Flow (`labs.google`), cole as fotos e aplique o prompt.
+5. Gere o vídeo.
+6. Volte ao Airbnb e mande mensagem ao anfitrião oferecendo o vídeo pronto.
+
+:::warning[O prompt não está na fonte]
+Como na [venda de sites](./venda-de-sites.mdx), o prompt do passo 4 é prometido nos comentários e
+não aparece na transcrição.
+:::
+
+## Como ancorar o preço
+
+Na mensagem, compare o preço do vídeo com a **diária do próprio imóvel**: R$ 500 contra uma
+diária de R$ 865 faz a decisão parecer trivial. Ancorar no faturamento do cliente, nunca no seu
+custo de produção.
+
+## Pontos de atenção
+
+- **Fotos são de terceiro.** Copiar todas as imagens de um anúncio para gerar vídeo comercial
+  envolve material do anfitrião ou do fotógrafo. Nenhuma autorização é mencionada na fonte —
+  confirme antes de escalar.
+- **Abordagem fria** pela mensagem da plataforma pode violar os termos de uso do Airbnb para
+  contato comercial. Não abordado na fonte.
+
+## Checklist
+
+- [ ] Escolher cidade e aplicar filtro de imóveis mais caros
+- [ ] Selecionar anúncios de alto padrão e salvar as fotos
+- [ ] Montar o prompt de vídeo para o Google Flow
+- [ ] Gerar o vídeo e revisar a saída
+- [ ] Ancorar o preço na diária do imóvel na mensagem
+- [ ] Enviar ao anfitrião pela mensagem do Airbnb
+- [ ] Confirmar autorização de uso das fotos antes de escalar
+
+## Próximo passo
+
+[Avatar clonado](../producao-de-video/avatar-clonado-heygen.mdx) — produzir vídeo em volume sem
+gravar.

@@ -1,0 +1,71 @@
+---
+sidebar_position: 1
+title: Catálogo
+description: O que cada ferramenta faz, para que serve aqui e onde encontrar
+---
+
+# Catálogo de ferramentas
+
+Uma linha por ferramenta: o que ela é, para que o time usa e o link oficial. Quando um grupo
+crescer demais, ele vira página própria.
+
+## Geração de vídeo e imagem
+
+| Ferramenta | O que faz | Para que serve aqui | Link |
+|---|---|---|---|
+| **HeyGen** | Clona rosto e voz a partir de ~15s de gravação e gera vídeos com o avatar | Produzir vídeo em volume sem voltar a gravar — ver [Avatar clonado](../producao-de-video/avatar-clonado-heygen.mdx) | `https://www.heygen.com/` |
+| **Seedance** | Modelo de geração de vídeo da ByteDance, com cenas cinematográficas e movimento | Colocar o avatar do HeyGen em cena elaborada, evitando o visual estático | `https://seed.bytedance.com/en/seedance` |
+| **Google Flow** | Gera vídeo por IA a partir de fotos + prompt | Vídeo de imóvel para [anfitriões de Airbnb](../servicos-com-ia/venda-de-videos-airbnb.mdx) e criativos de produto | `https://labs.google/` |
+| **Vmake Labs** | Remove legendas, marcas d'água e texto de vídeo, reconstruindo o fundo com IA | Reaproveitar vídeo de terceiro — ver [Remoção de legenda](../producao-de-video/remocao-de-legenda.mdx) | `https://vmake.ai/` |
+
+:::note[Sobre o Seedance]
+As fontes citam "Seedance" sem dizer por qual plataforma o acesso é feito. O link acima é o do
+modelo oficial da ByteDance; existem vários portais de terceiros com o mesmo nome.
+:::
+
+## Geração de site e texto
+
+| Ferramenta | O que faz | Para que serve aqui | Link |
+|---|---|---|---|
+| **Claude** | Modelo de linguagem da Anthropic | Extrair dados de um negócio e montar o prompt do site — ver [Venda de sites](../servicos-com-ia/venda-de-sites.mdx) | `https://claude.ai/` |
+| **Base44** | Gera e publica sites a partir de prompt, com um clique | Entregável da venda de sites | `https://base44.com/` |
+
+## Prospecção
+
+| Ferramenta | O que faz | Para que serve aqui | Link |
+|---|---|---|---|
+| **Google Maps** | Busca de negócios locais por nicho e cidade | Origem dos leads e do contato na venda de sites | `https://maps.google.com/` |
+| **Airbnb** | Marketplace de hospedagem | Filtro de leads de alto padrão e banco de fotos dos imóveis | `https://www.airbnb.com.br/` |
+
+## Dados e produtividade
+
+| Ferramenta | O que faz | Para que serve aqui | Link |
+|---|---|---|---|
+| **ChatGPT Chat Exporter** | Userscript open-source (MIT) que exporta conversas do ChatGPT em Markdown ou PDF, e do Google Gemini em Markdown, preservando blocos de código, formatação e a atribuição de quem falou | Transformar pesquisa feita em chat de IA em arquivo de texto — o insumo bruto que alimenta esta documentação | `https://github.com/rashidazarang/chatgpt-chat-exporter` |
+
+**Como usar:** instale um gerenciador de userscript (Tampermonkey, Violentmonkey ou Greasemonkey)
+e adicione o script pelo GitHub ou GreasyFork — um botão de exportar aparece na barra lateral do
+chat. Alternativa sem instalar nada: abrir o DevTools na conversa, colar o conteúdo do `.js`
+correspondente no Console e pressionar Enter.
+
+| Versão | Cobertura |
+|---|---|
+| v0.4.0 | ChatGPT (Markdown, PDF) · Gemini (Markdown) · Claude anunciado como "coming soon", ainda não suportado |
+
+:::warning[Userscript roda dentro da sua sessão logada]
+O script executa na página do ChatGPT ou do Gemini com acesso ao conteúdo da conversa e à sessão
+autenticada. Instale a partir do repositório oficial, confira o código antes e evite usar em
+conta com dado sensível. O repositório também contém um `exporter-html.js`, mas o README **não**
+lista HTML entre os formatos suportados — *funcionalidade incerta*.
+:::
+
+## Como escolher
+
+| Necessidade | Ferramenta |
+|---|---|
+| Produzir vídeo sem aparecer nem gravar | **HeyGen** + **Seedance** |
+| Gerar vídeo a partir de fotos de um produto ou imóvel | **Google Flow** |
+| Limpar legenda ou marca d'água de vídeo alheio | **Vmake Labs** |
+| Entregar um site pronto em minutos | **Claude** + **Base44** |
+| Achar leads locais com dado de contato | **Google Maps** |
+| Salvar pesquisa de chat de IA como arquivo | **ChatGPT Chat Exporter** |

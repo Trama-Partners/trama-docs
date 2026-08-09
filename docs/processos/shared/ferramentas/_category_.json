@@ -1,0 +1,10 @@
+{
+  "label": "3. Ferramentas",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Ferramentas",
+    "description": "Catálogo das ferramentas usadas pelo time — o que cada uma faz, para que serve aqui e o link oficial.",
+    "slug": "/processos/shared/ferramentas"
+  }
+}
