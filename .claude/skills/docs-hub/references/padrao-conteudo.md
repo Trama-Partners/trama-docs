@@ -95,6 +95,7 @@ Nunca preencha lacuna com suposição. Marque com o padrão correspondente:
 | Fonte se contradiz ou hesita | "*informação incerta*" na linha + item em "Pontos de atenção" |
 | Material é promocional | Uma linha em "Pontos de atenção" dizendo de quem é a ferramenta promovida |
 | Data de coleta importa | `:::note[Data da coleta]` no fim |
+| Hub tem áreas previstas e ainda vazias | `:::note[Área em construção]` na visão geral, dizendo o que entra depois |
 
 ## Sinalizar conflito
 

@@ -76,8 +76,26 @@ Ordene as áreas na ordem em que **quem executa** precisa delas:
 5. **Ferramentas** — catálogo e comparativos, consultado sob demanda
 6. **Riscos / conformidade** — o que dá problema, regras externas, penalidades
 
-Nem todo hub usa as seis. Use as que o material sustenta — área com uma página só e sem
-perspectiva de crescer deve virar página solta na raiz do hub, não pasta.
+Nem todo hub usa as seis. Use as que o material sustenta.
+
+### Quando uma área vira pasta
+
+O critério é **a frente de trabalho, não a quantidade de páginas que ela tem hoje**. Se o assunto
+é uma frente que o time vai continuar alimentando, ele vira pasta numerada já na primeira página —
+mesmo que fique com uma página só por um tempo. Criar a pasta depois custa mudança de URL.
+
+Página solta na raiz do hub só para conteúdo avulso por natureza, que não pertence a nenhuma
+frente.
+
+Quando o hub tem áreas previstas mas ainda não escritas, declare isso na visão geral com
+`:::note[Área em construção]` — assim a numeração `1.` não parece que faltam arquivos.
+
+## `visao-geral.mdx` é obrigatória
+
+**Todo hub tem visão geral, sem exceção** — inclusive hub com uma área só. Ela é a porta de
+entrada da frente e o lugar onde moram a trilha, os atalhos e os avisos globais. O
+`generated-index` do `_category_.json` não substitui: ele lista arquivos, não explica ordem, não
+dá atalho por objetivo e não carrega aviso.
 
 ## Navegação
 

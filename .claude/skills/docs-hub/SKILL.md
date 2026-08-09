@@ -100,9 +100,14 @@ Sem fontes novas. O objetivo é reorganizar o que já está escrito.
 4. **Regra dura: nenhum conteúdo se perde na refatoração.** Redistribuir e deduplicar, sim.
    Deletar informação, não — a menos que seja duplicata exata, e nesse caso diga qual página
    ficou com o original.
-5. Após aprovação: crie os arquivos novos, remova os antigos, atualize links que apontavam para
-   os caminhos velhos (`grep` pelos nomes antigos em todo `docs/`).
-6. Valide.
+5. Após aprovação: crie os arquivos novos e remova os antigos. Arquivo que só muda de lugar vai
+   com `git mv` — preserva o histórico.
+6. Conserte os links nos **dois sentidos**:
+   - **quem apontava para o arquivo movido** — `grep` pelo nome antigo em `docs/`, `src/` e
+     `docusaurus.config.ts`;
+   - **os links de dentro do arquivo movido** — mudar de pasta muda a profundidade relativa, então
+     todo `../` interno precisa ser recontado. É a armadilha mais fácil de esquecer.
+7. Valide.
 
 ---
 
