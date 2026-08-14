@@ -6,13 +6,15 @@ description: Ferramentas de texto para fala usadas na narração de criativo e d
 
 # Texto para fala e clonagem de voz
 
-A narração é o único insumo da live que não sai do Flow. Estas são as opções mapeadas.
+A narração é o único insumo da live que não sai do Flow. Estas são as opções mapeadas. As três
+primeiras entregam só a faixa de áudio; a última entrega o vídeo já sincronizado com a fala.
 
 | Ferramenta | O que faz | Plano gratuito | Pago |
 | :--- | :--- | :--- | :--- |
 | **ElevenLabs** (`https://elevenlabs.io/`) | Referência de qualidade em português. É a ferramenta do método documentado — a calibragem de voz, velocidade e estabilidade está em [Produção dos ativos](../lives/producao-dos-ativos.mdx) | 10.000 créditos/mês | Plano citado nas fontes: 30.000 créditos, 20 estúdios e clonagem de voz |
 | **MiniMax Audio** (`https://www.minimax.io/audio`) | 50+ idiomas e 300+ vozes. **Clonagem instantânea a partir de ~10s de áudio**, preservando tom e sotaque | Uso avulso pelo site | API a partir de US$ 60 por milhão de caracteres; licença comercial nos planos Pro e Enterprise |
 | **LuvVoice** (`https://luvvoice.com/br/dashboard/text-to-speech`) | 200+ vozes em 70+ idiomas, com upload de documento. O mais simples dos três | **20.000 caracteres/mês**, limite de 3.000 por conversão | Até 20.000 caracteres por conversão, uso comercial e vozes premium. Áudio fica guardado por 72h |
+| **LipSync.Video** (`https://lipsync.video/`) | Sincronia labial: casa o movimento de boca de um vídeo ou avatar com o áudio. Tem TTS integrado (200+ vozes, inclui português) e 300+ avatares, então gera a fala e o vídeo no mesmo passo. Modelo 2.0 é o realista; 1.0 é rápido | Sem marca d'água, por sistema de crédito (check-in, compartilhamento, indicação) | Assinatura *Unlimited* — valor não publicado |
 
 :::danger[Voz de IA em live é violação declarada]
 O TikTok classifica como não conforme a transmissão que depende de **voz gerada por IA ou áudio
@@ -29,7 +31,9 @@ vídeo do feed a restrição não se aplica da mesma forma; em live, aplica.
 | Narração de live em português com controle fino de tom e velocidade | **ElevenLabs** |
 | Manter a mesma voz em todas as contas, clonando de uma gravação curta | **MiniMax Audio** |
 | Gerar áudio de graça, sem cartão, para testar roteiro | **LuvVoice** |
+| Fazer um avatar ou pessoa gravada falar o roteiro, com boca sincronizada, em vídeo do feed | **LipSync.Video** |
 | Gerar voz por API junto com imagem e vídeo | **Kie.ai** — ver [Geradores de vídeo e imagem](./geradores-de-video-e-imagem.mdx) |
+| Já assinar Magnific e querer voz e música no mesmo saldo | **Magnific** — ver [Geradores de vídeo e imagem](./geradores-de-video-e-imagem.mdx) |
 
 :::note[Data da coleta]
 Limites e preços conferidos nas páginas oficiais em **agosto de 2026**.
