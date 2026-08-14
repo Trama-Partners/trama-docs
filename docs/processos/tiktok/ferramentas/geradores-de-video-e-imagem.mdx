@@ -1,0 +1,76 @@
+---
+sidebar_position: 2
+title: Geradores de vídeo e imagem
+description: Onde animar a imagem do produto — ferramentas do Google, apps da Meta, geradores pagos e hubs multi-modelo com MCP para Claude Code
+---
+
+# Geradores de imagem e animação de vídeo
+
+Depois do prompt vem a geração. As opções abaixo cobrem desde o caminho gratuito do Google, que é
+o usado nas fontes, até hubs que reúnem vários modelos numa assinatura só.
+
+## Google — o caminho das fontes
+
+| Ferramenta | O que faz | Custo |
+| :--- | :--- | :--- |
+| **Google Flow** (`https://labs.google/`) | Gera a imagem base (**Nano Banana Pro**) e anima os clipes (**Omni/OmniFlash**, **VO3**). É o gerador dos métodos de [Vídeo POV](../criativos/video-ia-no-desktop.mdx) e de [Produção dos ativos](../lives/producao-dos-ativos.mdx) | Conta Google; limites por plano |
+| **Whisk** — ferramenta compartilhada ([link do time](https://labs.google/fx/pt/tools/flow/shared/tool/c0c427a4-f509-4a15-a704-21f89e512dbe)) | Ferramenta do Flow que mistura imagens de referência (sujeito, cena, estilo) para gerar uma nova. O link acima é uma ferramenta compartilhada e **exige login** — o conteúdo dela não está descrito aqui | Conta Google |
+| **Gemini** (`https://gemini.google.com/app`) | Anima imagem e gera imagem direto no chat, sem passar pelo Flow. Caminho mais curto quando é um clipe só | Conta Google |
+
+O Flow também está no [catálogo compartilhado](../../shared/ferramentas/catalogo.mdx), onde é
+usado para vídeo de imóvel — mesmo fluxo, outro produto.
+
+## Meta
+
+| Ferramenta | O que faz | Custo |
+| :--- | :--- | :--- |
+| **Vibes** (`https://vibes.ai/`) | App e feed de vídeo curto 100% gerado por IA, dentro do Meta AI. Cria a partir de texto ou de foto/vídeo seu, faz sincronização labial e permite **remixar** qualquer vídeo do feed | Grátis |
+
+O feed do Vibes serve como banco de referência: dá para achar o formato que está performando e
+remixar em vez de escrever prompt do zero.
+
+## Geradores pagos de vídeo
+
+| Ferramenta | O que faz | Plano gratuito | Pago |
+| :--- | :--- | :--- | :--- |
+| **Kling** (`https://kling.ai/app/video/new`) | Geração de vídeo da Kuaishou, forte em movimento realista | 66 créditos/dia, que expiram em 24h — saída em 720p, máximo 5s, com marca d'água e uso pessoal apenas | US$ 6,99/mês (660 créditos) a US$ 180/mês |
+| **Synthesia** (`https://www.synthesia.io/pt-br/precos`) | Vídeo com avatar apresentador em 160+ idiomas — formato "pessoa falando", não POV de produto | 10 min/mês, 9 avatares, sem marca d'água | US$ 29/mês (Starter) e US$ 89/mês (Creator, com API) |
+
+## Hubs multi-modelo com MCP
+
+Os três reúnem vários modelos e expõem **MCP**, o que permite gerar mídia direto do Claude Code
+em vez de abrir a interface web.
+
+| Ferramenta | O que faz | Preço |
+| :--- | :--- | :--- |
+| **Kairogen** (`https://kairogen.ai/`) | Hub brasileiro: Sora 2, VEO 3.1, Kling, Seedance e Wan em vídeo; Nano Banana 2, Seedream e Z-Image Turbo em imagem. Traz **KairoBoost** (reescreve o prompt com detalhe técnico), **ViralFX** (+40 efeitos de pós), upscale 4K via Topaz, presets de marca e 4 versões em paralelo | R$ 49/mês (280 créditos) a R$ 1.199/mês (8.000). Licença comercial em todos |
+| **Kie.ai** (`https://kie.ai/pt`) | API unificada para 25+ modelos de imagem, vídeo e áudio (Nano Banana Pro, Veo 3, Kling, Seedance, Seedream, Suno, ElevenLabs, Midjourney, Flux, Wan). Cobrança por crédito | Tipicamente **30% a 50% abaixo** das APIs oficiais |
+| **Magnific** (`https://www.magnific.com/`) | Upscale generativo até 16x, mais Enhance, DeNoise e DeJPEG — reconstrói textura em vez de interpolar pixel. Resolve o clipe de 720p que sai granulado do Flow. É a Freepik renomeada (abril de 2026) | Teste de 24h com 50 tokens. A partir de US$ 39/mês (2.500 tokens, ~200 upscales) até ~US$ 299/mês |
+
+:::tip[Ligar no Claude Code via MCP]
+- **Magnific** — MCP oficial em `https://www.magnific.com/mcp` (docs em `docs.magnific.com/modelcontextprotocol`), transporte HTTP streamable, sem cobrança separada: consome os créditos do próprio plano web.
+- **Kie.ai** — CLI + servidor MCP da comunidade em `https://github.com/felores/kie-cli-mcp`, com os 25+ modelos expostos como ferramentas.
+- **Kairogen** — integração MCP anunciada em todos os planos, incluindo o de R$ 49.
+
+Com MCP ligado, gerar lote de clipe vira comando de terminal — encaixa direto no pipeline de
+[escala](../criativos/escala-e-postagem-automatica.mdx).
+:::
+
+## Como escolher
+
+| Necessidade | Ferramenta |
+| :--- | :--- |
+| Reproduzir o método documentado (imagem base + clipes POV) | **Google Flow** com Nano Banana Pro e Omni |
+| Animar uma imagem só, rápido | **Gemini** |
+| Achar formato que está viralizando e remixar | **Vibes** |
+| Movimento realista com plano barato | **Kling** |
+| Avatar falando, com script traduzido | **Synthesia** |
+| Vários modelos numa assinatura em real, com efeito e upscale | **Kairogen** |
+| Gerar por API/MCP pagando por uso | **Kie.ai** |
+| Salvar clipe granulado ou entregar imagem em alta | **Magnific** |
+
+:::note[Data da coleta]
+Preços e limites conferidos nas páginas oficiais em **agosto de 2026**.
+:::
+
+Próximo insumo da produção: [Vozes por IA](./vozes-por-ia.mdx).
