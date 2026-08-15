@@ -1,0 +1,90 @@
+---
+sidebar_position: 3
+title: Higgsfield no Claude
+description: Como ligar o Higgsfield ao Claude por MCP ou CLI e gerar imagem e vídeo sem sair da conversa
+---
+
+# Higgsfield — geração de vídeo dentro do Claude
+
+O Higgsfield se define como *"AI-native creative suite"*: imagem, vídeo, áudio e edição num
+lugar só. O que interessa aqui é o **MCP** — um conector que expõe os modelos dele como
+ferramentas do agente, então o Claude gera o clipe direto na conversa, sem abrir a interface web
+e sem API key.
+
+Encaixa no mesmo lugar dos [hubs multi-modelo](./geradores-de-video-e-imagem.mdx) já
+documentados, com uma diferença: além do MCP tem CLI e skills próprias.
+
+## O que entrega
+
+| Recurso | Detalhe |
+| :--- | :--- |
+| **Modelos** | 30+, incluindo Nano Banana Pro, Google Omni Flash, Seedance 2.5 e 2.0, Seedream 5.0 Lite, Kling 3, GPT Image 2, Soul 2.0, Cinema Studio, Flux, Minimax Hailuo e Veo |
+| **Imagem** | Até 4K |
+| **Vídeo** | Até 15 segundos, em vários estilos cinematográficos |
+| **Soul** | Treino de personagem para manter o mesmo rosto entre gerações |
+| **Entrada** | Prompt de texto, imagem de referência, ou os dois combinados |
+| **Histórico** | O agente lê as gerações anteriores da conta, o que permite iterar sem recomeçar |
+| **Preço** | ⚠️ **Valores não informados** — a página de planos não expõe tabela; o site só diz que é crédito por geração, variando por modelo e resolução |
+
+Clientes suportados: Claude (web, Desktop e Claude Code), OpenClaw, Hermes Agent, NemoClaw e
+qualquer cliente compatível com MCP.
+
+## Passo a passo — Claude web e Desktop
+
+1. Copie a URL do conector: `https://mcp.higgsfield.ai/mcp`
+2. No `claude.ai`, clique no ícone de perfil e vá em **Settings → Connectors**. No Claude Desktop,
+   **Settings** (`Cmd+,` no Mac) **→ Connectors**. Atalho direto:
+   `https://claude.ai/customize/connectors?modal=add-custom-connector`
+3. Clique em **Add custom connector**, cole a URL e confirme em **Connect**
+4. Faça login na conta Higgsfield na janela de autorização e autorize
+5. Volte ao Claude — o conector aparece na lista de ativos
+
+Para conferir se pegou, abra conversa nova e pergunte o saldo de créditos da conta Higgsfield. Se
+o Claude chamar a ferramenta e devolver o dado, está ligado.
+
+## Passo a passo — Claude Code
+
+O site recomenda **CLI em vez do conector web** para este agente.
+
+```bash
+npm i -g @higgsfield/cli
+higgsfield auth login
+npx skills add higgsfield-ai/skills
+```
+
+O terceiro comando instala as três skills: **Generate** (imagem e vídeo), **Soul** (treino e
+consistência de personagem) e **Product Photoshoot** (foto de produto). Depois de instaladas, são
+chamadas por comando — `/higgsfield:generate` e equivalentes. A geração é assíncrona: o agente
+dispara e consulta o resultado depois.
+
+:::danger[MCP sempre queima crédito, mesmo em plano ilimitado]
+Acesso ilimitado e geração gratuita valem **somente em `higgsfield.ai`**. Nas palavras do site,
+*"anything generated through MCP, CLI, Canvas, Supercomputer, or other automated tools deducts
+credits"* — na taxa padrão, independente do plano.
+
+Consequência prática: se você tem ilimitado num modelo, gerar por ali no Claude custa dinheiro
+que gerar no navegador não custaria. Não há teto de gasto nativo — o único freio é instruir o
+limite dentro da própria conversa. Em geração em lote, isso vira despesa rápida.
+:::
+
+## Pontos de atenção
+
+- **O site se contradiz sobre o requisito de plano.** O help center lista *"Active paid Higgsfield
+  subscription"* como pré-requisito da conexão; a home e o blog falam em créditos grátis no
+  cadastro e *"free renders to start"*. Assuma que precisa de plano pago até confirmar na conta.
+- **Seedance 2.5 em 1080p exige acesso exclusivo**, não é liberado para todo mundo.
+- **Os ativos gerados caem em Assets no `higgsfield.ai`** em até 60 segundos, marcados com a
+  origem MCP. Claude.ai e Claude Desktop usam a mesma conta ao mesmo tempo sem conflito.
+- **Agente de terceiro tem termos separados.** O site avisa que uso via clientes que não são os
+  oficiais fica sob responsabilidade do dono da conta.
+- **Se as ferramentas não ativarem**, abra conversa nova citando Higgsfield pelo nome, ou confira
+  o toggle por conversa. Falha de autorização se resolve desconectando e reconectando o conector.
+
+:::note[Data da coleta]
+Dados conferidos nas páginas oficiais do `higgsfield.ai` (`/mcp`, `/cli`, `/skills` e help center)
+em **agosto de 2026**.
+:::
+
+## Próximo passo
+
+Com o gerador ligado, falta a narração: [Vozes por IA](./vozes-por-ia.mdx).

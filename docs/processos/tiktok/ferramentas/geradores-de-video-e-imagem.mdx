@@ -38,11 +38,12 @@ remixar em vez de escrever prompt do zero.
 
 ## Hubs multi-modelo com MCP
 
-Os três reúnem vários modelos e expõem **MCP**, o que permite gerar mídia direto do Claude Code
+Os quatro reúnem vários modelos e expõem **MCP**, o que permite gerar mídia direto do Claude Code
 em vez de abrir a interface web.
 
 | Ferramenta | O que faz | Preço |
 | :--- | :--- | :--- |
+| **Higgsfield** (`https://higgsfield.ai/mcp`) | Suite com 30+ modelos (Nano Banana Pro, Seedance 2.5, Kling 3, GPT Image 2, Veo, Flux, Minimax Hailuo). Imagem até 4K e vídeo até 15s, mais **Soul** para manter o mesmo personagem entre gerações. Único da lista com CLI e skills próprias — ver [Higgsfield no Claude](./higgsfield-mcp.mdx) | Crédito por geração, variando por modelo e resolução. ⚠️ **Tabela de planos não informada** no site |
 | **Kairogen** (`https://kairogen.ai/`) | Hub brasileiro: Sora 2, VEO 3.1, Kling, Seedance e Wan em vídeo; Nano Banana 2, Seedream e Z-Image Turbo em imagem. Traz **KairoBoost** (reescreve o prompt com detalhe técnico), **ViralFX** (+40 efeitos de pós), upscale 4K via Topaz, presets de marca e 4 versões em paralelo | R$ 49/mês (280 créditos) a R$ 1.199/mês (8.000). Licença comercial em todos |
 | **Kie.ai** (`https://kie.ai/pt`) | API unificada para 25+ modelos de imagem, vídeo e áudio (Nano Banana Pro, Veo 3, Kling, Seedance, Seedream, Suno, ElevenLabs, Midjourney, Flux, Wan). Cobrança por crédito | Tipicamente **30% a 50% abaixo** das APIs oficiais |
 | **Magnific** (`https://www.magnific.com/br`) | Upscale generativo até 16x, mais Enhance, DeNoise e DeJPEG — reconstrói textura em vez de interpolar pixel. Resolve o clipe de 720p que sai granulado do Flow. Desde a renomeação da Freepik (28 de abril de 2026) deixou de ser só upscaler: virou plataforma inteira, com geração de imagem, vídeo, música e voz, banco de 250M+ ativos de stock e modelos de terceiros (Veo 3.1, Kling 2.5, Seedance, Seedream 5.0 Pro, Nano Banana 2 e Pro) | Cobrança em crédito anual, na anuidade: **Premium R$ 59/mês** (240 mil créditos/ano), **Premium+ R$ 135/mês** (600 mil, inclui upscaler Topaz e cerca de 10 modelos ilimitados) e **Pro R$ 862,50/mês** (4 milhões). No mensal avulso, R$ 80, R$ 180 e R$ 1.150. Há plano Business por assento |
@@ -50,6 +51,10 @@ em vez de abrir a interface web.
 Crédito de plano do Magnific **não acumula**: o que sobra do ciclo expira. E o "ilimitado" do Premium+ vale só para a lista fechada de modelos — o resto puxa do saldo.
 
 :::tip[Ligar no Claude Code via MCP]
+- **Higgsfield** — conector em `https://mcp.higgsfield.ai/mcp` para Claude web e Desktop, ou CLI
+  (`npm i -g @higgsfield/cli`) para Claude Code, que é o caminho recomendado pelo próprio site.
+  Sem API key. Passo a passo, skills e a **regra de crédito** em
+  [Higgsfield no Claude](./higgsfield-mcp.mdx).
 - **Magnific** — MCP oficial em `https://www.magnific.com/mcp` (docs em `docs.magnific.com/modelcontextprotocol`), transporte HTTP streamable, sem cobrança separada: consome os créditos do próprio plano web. A API também é cobrada por crédito, com preço por área do pixel de saída — quanto maior o fator de upscale, mais cara a chamada.
 - **Kie.ai** — CLI + servidor MCP da comunidade em `https://github.com/felores/kie-cli-mcp`, com os 25+ modelos expostos como ferramentas.
 - **Kairogen** — integração MCP anunciada em todos os planos, incluindo o de R$ 49.
@@ -69,6 +74,7 @@ Com MCP ligado, gerar lote de clipe vira comando de terminal — encaixa direto 
 | Avatar falando, com script traduzido | **Synthesia** |
 | Vários modelos numa assinatura em real, com efeito e upscale | **Kairogen** |
 | Gerar por API/MCP pagando por uso | **Kie.ai** |
+| Gerar dentro da conversa do Claude, com personagem consistente | **Higgsfield** |
 | Salvar clipe granulado ou entregar imagem em alta | **Magnific** |
 | Resolver imagem, vídeo, stock e áudio numa assinatura só, em real | **Magnific** no Premium+ |
 
@@ -76,4 +82,5 @@ Com MCP ligado, gerar lote de clipe vira comando de terminal — encaixa direto 
 Preços e limites conferidos nas páginas oficiais em **agosto de 2026**.
 :::
 
-Próximo insumo da produção: [Vozes por IA](./vozes-por-ia.mdx).
+Próximo passo: [Higgsfield no Claude](./higgsfield-mcp.mdx), o caminho de gerar sem sair da
+conversa do agente.
